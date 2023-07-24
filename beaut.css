@@ -1,0 +1,415 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif, open, tahoma, georgia;
+}
+.container{
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+img{
+  vertical-align: middle;
+  height: 630px;
+  width: 100%;
+}
+.myslides{
+  display: none;
+}
+.square{
+  height: 4px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 10%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .square:hover{
+  background-color: red;
+}
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade{
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+.left{
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  color: white;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-family: open;
+  font-weight: bold;
+  font-size: 22px;
+}
+.me{
+  position: absolute;
+  bottom: 8px;
+  right: 47%;
+}
+.link{
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  color: white;
+  font-family: georgia;
+  font-weight: lighter;
+  font-size: 12px;
+}
+.lin{
+  margin-left: 10px;
+}
+#fa{
+  color: red;
+  margin-left: 10px;
+  font-size: 12px;
+}
+nav{
+  position: absolute;
+  top: 20px;
+  right: 16px;
+}
+nav ul{
+  float: right;
+  margin-right:50px;
+}
+nav li{
+  display: inline-block;
+  margin: 0,15px;
+  margin-left: 10px;
+  line-height: 80px;
+}
+nav a{
+  color: white;
+  font-size: 15px;
+  padding: 7px,10px;
+  text-decoration: none;
+}
+nav a:active, a:hover{
+  color: red;
+}
+.but{
+  background-color: red;
+  color: white;
+  border: 0;
+  height: 25px;
+  width: 100px;
+  font-size: 15px;
+  margin-left: 10px;
+  border-radius: 12px;
+}
+.but:hover{
+  background-color: black;
+}
+.open{
+  position: absolute;
+  top: 44px;
+  left: 25px;
+  width: 20px;
+  height: 20px;
+  color: white;
+  background: none;
+  border: none;
+}
+.sidepanelo{
+  height: 400px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  background-color:none;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: .5s;
+}
+.sidepanelo a:hover{
+  color: red;
+}
+.sidepanelo a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: .3s;
+}
+.sidepanelo .close{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 40px;
+}
+.thin{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.high{
+  color: red;
+  font-family: georgia;
+  font-size: 35px;
+  font-weight: bold;
+}
+.low{
+  color: white;
+  font-family: georgia;
+  font-size: 35px;
+  font-weight: bold;
+}
+.klin{
+  position: absolute;
+  top: 52%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+.min{
+  color: white;
+  font-family: tahoma;
+  font-size: 20px;
+  font-weight: lighter;
+  margin-left: 70px;
+}
+.ink{
+  position: absolute;
+  top: 64%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+.butt{
+  background: none;
+  border-color: red;
+  color: white;
+  height: 30px;
+  width: 100px;
+  border-radius: 15px;
+  font-size: 11px;
+}
+.butt:hover{
+  color: red;
+  background-color: black;
+}
+.ing{
+  position: absolute;
+  top: 75%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+.fas{
+  color: red;
+  margin-left: 38px;
+  font-size: 20px;
+}
+.pick{
+  color: black;
+  font-family: tahoma;
+}
+.about-section{
+  background-size: 60%;
+}
+.insider{
+  width: 50%;
+  float: right;
+  background-color: white;
+  padding: 50px;
+  margin-top: 70px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.insider h1{
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 500;
+}
+.peacock{
+  font-size: 15px;
+  color: black;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+.skills{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 13px;
+}
+@media screen and (max-width:1000px) {
+  .about-section{
+    background-size:100%;
+    padding: 100px 40px;
+  }
+  .insider{
+    width: 100%;
+    height: 400px;
+    margin-top: 120px;
+  }
+}
+@media screen and (max-width:600px) {
+  .about-section{
+    padding: 0px;
+  }
+  .insider{
+    padding: 60px;
+  }
+}
+.last{
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  color: white;
+  font-family: sans-serif;
+  transform: translate(-50%, -50%);
+}
+h1{
+  font-family: georgia;
+}
+.fro{
+  height: 1700px;
+}
+.frost{
+  position: absolute;
+  width: 35%;
+  cursor: pointer;
+  top: 10%;
+  left: 8%;
+}
+.fros{
+  position: absolute;
+  width: 35%;
+  cursor: pointer;
+  top: 10%;
+  right: 8%;
+}
+.freez{
+  position: absolute;
+  width: 35%;
+  cursor: pointer;
+  top: 32%;
+  left: 8%;
+}
+.finch{
+  position: absolute;
+  width: 35%;
+  cursor: pointer;
+  top: 32%;
+  right: 8%;
+}
+.free{
+  position: absolute;
+  width: 35%;
+  cursor: pointer;
+  top: 54%;
+  left: 8%;
+}
+.inch{
+  position: absolute;
+  width: 35%;
+  cursor: pointer;
+  top: 54%;
+  right: 8%;
+}
+.freak{
+  position: absolute;
+  width: 35%;
+  cursor: pointer;
+  top: 76%;
+  left: 8%;
+}
+.inches{
+  position: absolute;
+  width: 35%;
+  cursor: pointer;
+  top: 76%;
+  right: 8%;
+}
+
+.lit{
+  float: left;
+}
+.rust{
+  float: right;
+}
+.merge{
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+.feast{
+  color: white;
+  font-family: georgia;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 2%;
+}
+.spart{
+  margin-left: 20%;
+}
+.hush{
+  background: red;
+  border: none;
+  color: white;
+  height: 50px;
+  width: 120px;
+  border-radius: 22px;
+  font-size: 18px;
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hush:hover{
+  background-color: black;
+}
+.point{
+  width: 70%;
+  height: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-name: slide;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes slide{
+    0%{
+        background-image: url(image/IMG_1560.JPG);
+    }
+    20%{
+        background-image: url(image/IMG_1562.JPG);
+    }
+    40%{
+        background-image: url(image/IMG_1564.JPG);
+    }
+    60%{
+        background-image: url(image/IMG_1600.JPG);
+    }
+    80%{
+        background-image: url(image/IMG_1605.JPG);
+    }
+    100%{
+        background-image: url(image/IMG_1601.JPG);
+    }
+}
